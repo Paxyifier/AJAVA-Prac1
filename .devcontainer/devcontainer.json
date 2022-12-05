@@ -4,5 +4,14 @@
     "ghcr.io/devcontainers/features/java:1": {
       "version":"latest"
     }
-  }
+},
+"customizations": {
+	"vscode": {
+		"extensions": [
+			"vscjava.vscode-java-pack",
+			"VisualStudioExptTeam.vscodeintellicode",
+			"VisualStudioExptTeam.intellicode-api-usage-examples"
+		]
+	}
+}
 }

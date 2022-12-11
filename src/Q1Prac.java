@@ -1,32 +1,36 @@
 interface Shape{
-    public Double getArea();
+    Double getArea();
 }
 class Circle implements Shape {
-    public Double getRadius() {
-        return radius;
+    private final Double radius;
+    public Circle (Double radius){
+        this.radius =  radius;
     }
-    public void setRadius(Double radius) {
-        this.radius = radius;
-    }
-    private Double radius;
     @Override
     public Double getArea() {
         return radius*radius*Math.PI;
     }
 }
 class Square implements Shape {
-    public Double getSide() {
-        return side;
+    private final Double side;
+    public Square (Number side){
+        this.side = (Double) side;
     }
-    public void setSide(Double side) {
-        this.side = side;
-    }
-    private Double side;
     @Override
     public Double getArea() {
         return side*side;
     }
 }
-public class Q1Prac {
+public class Q1Prac <T extends  Shape> {
+    T shape ;
+    public Q1Prac(T shape){
+         this.shape = shape;
+    }
 
+    public static void main(String[] args) {
+        Shape shape1 = new Circle(12.0);
+        Shape shape2 = new Square(12.0);
+        System.out.println("The area for circle with radius 12 is "+ shape1.getArea());
+        System.out.println("The area for square with side 12 is "+ shape2.getArea());
+    }
 }

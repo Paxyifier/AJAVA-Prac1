@@ -4,11 +4,6 @@
 interface Shape{
     Double getArea();
 }
-class BoundedShape <T extends Shape> {
-    public Double <T> getArea(T shape) {
-        return 0.0;
-    }
-}
 class Circle implements Shape {
     private final Double radius;
     public Circle (Double radius){

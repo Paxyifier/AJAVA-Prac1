@@ -1,5 +1,13 @@
+// Implement bounded types (implements an interface) with generics.
+// .Create a Interface shape with method Area() create Circle and Square which implements Class Shape.
+// Create a generic class BoundedShape that extends shape. And implement the generics and use area function accordingly
 interface Shape{
     Double getArea();
+}
+class BoundedShape <T extends Shape> {
+    public Double <T> getArea(T shape) {
+        return 0.0;
+    }
 }
 class Circle implements Shape {
     private final Double radius;
